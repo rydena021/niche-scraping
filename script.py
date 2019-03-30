@@ -33,7 +33,7 @@ i = 0
 while i < len(states):
     # set page url
     page = requests.get('https://www.niche.com/k12/search/largest-school-districts/s/%s/' % states[i])
-    # idk what this does
+    # text version of the html
     tree = html.fromstring(page.content)
     #This will create a list of districts:
     districts = tree.xpath('//h2[@class="search-result__title"]/text()')
